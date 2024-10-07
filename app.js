@@ -2026,10 +2026,10 @@ document.addEventListener("DOMContentLoaded", function () {
             <p><strong>Root:</strong> ${randomVerb.root}</p>
             <p><strong>Translation:</strong> ${randomVerb.forms.translation}</p>
             ${babTypeDisplay} <!-- Conditionally rendered -->
-            <div class="flex justify-around">
-            <p><strong>Past:</strong> ${randomVerb.forms.past}</p>
-            <p><strong>Present:</strong> ${randomVerb.forms.present}</p>
+            <div class="flex justify-center">
             <p><strong>Imperative:</strong> Soon!</p>
+            <p><strong>Present:</strong> ${randomVerb.forms.present}</p>
+            <p><strong>Past:</strong> ${randomVerb.forms.past}</p>
             </div>
             </div>
             `;
