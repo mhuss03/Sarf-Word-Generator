@@ -1994,7 +1994,6 @@ document.addEventListener("DOMContentLoaded", function () {
     const selectedBab = babSelect.value;
     const selectedType = typeSelect.value;
 
-    // Filter verbs based on selection
     let filteredVerbs = verbs.filter((verb) => {
       const babMatches = selectedBab === "Any" || verb.bab === selectedBab;
       const typeMatches = selectedType === "Any" || verb.type === selectedType;
@@ -2006,7 +2005,6 @@ document.addEventListener("DOMContentLoaded", function () {
       return;
     }
 
-    // Get random verb from filtered list
     const randomVerb =
       filteredVerbs[Math.floor(Math.random() * filteredVerbs.length)];
 
@@ -2020,13 +2018,12 @@ document.addEventListener("DOMContentLoaded", function () {
     `
         : "";
 
-    // Display the verb and its forms
     verbDisplay.innerHTML = `
           <div class="mt-4 p-4 bg-white rounded grid gap-4">
             <p><strong>Root:</strong> ${randomVerb.root}</p>
             <p><strong>Translation:</strong> ${randomVerb.forms.translation}</p>
-            ${babTypeDisplay} <!-- Conditionally rendered -->
-            <div class="flex justify-center">
+            ${babTypeDisplay}
+            <div class="flex justify-around">
             <p><strong>Imperative:</strong> Soon!</p>
             <p><strong>Present:</strong> ${randomVerb.forms.present}</p>
             <p><strong>Past:</strong> ${randomVerb.forms.past}</p>
