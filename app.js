@@ -1,4 +1,4 @@
-[
+verbs = [
   {
     root: "أتى",
     bab: "I",
