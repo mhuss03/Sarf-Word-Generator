@@ -1,4 +1,4 @@
-verbs = [
+[
   {
     root: "أتى",
     bab: "I",
@@ -390,9 +390,9 @@ verbs = [
     },
   },
   {
-    root: "Mahmooz",
+    root: "خطِأ",
     bab: "I",
-    type: "Saheeh",
+    type: "Mahmooz",
     forms: {
       past: "خطِأ",
       present: "يخطَأ",
