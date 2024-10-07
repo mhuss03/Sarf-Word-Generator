@@ -2010,16 +2010,29 @@ document.addEventListener("DOMContentLoaded", function () {
     const randomVerb =
       filteredVerbs[Math.floor(Math.random() * filteredVerbs.length)];
 
+    const babTypeDisplay =
+      selectedBab === "Any" || selectedType === "Any"
+        ? `
+      <div class="flex justify-around">
+        <p><strong>باب (Form):</strong> ${randomVerb.bab}</p>
+        <p><strong>Type:</strong> ${randomVerb.type}</p>
+      </div>
+    `
+        : "";
+
     // Display the verb and its forms
     verbDisplay.innerHTML = `
-        <div class="mt-4 p-4 bg-white rounded">
-          <p><strong>Root:</strong> ${randomVerb.root}</p>
-          <p><strong>Translation:</strong> ${randomVerb.forms.translation}</p>
-          <p><strong>Past:</strong> ${randomVerb.forms.past}</p>
-          <p><strong>Present:</strong> ${randomVerb.forms.present}</p>
-          <p><strong>Imperative:</strong> Coming Soon! </p>
-          </div>
-          `;
+          <div class="mt-4 p-4 bg-white rounded grid gap-4">
+            <p><strong>Root:</strong> ${randomVerb.root}</p>
+            <p><strong>Translation:</strong> ${randomVerb.forms.translation}</p>
+            ${babTypeDisplay} <!-- Conditionally rendered -->
+            <div class="flex justify-around">
+            <p><strong>Past:</strong> ${randomVerb.forms.past}</p>
+            <p><strong>Present:</strong> ${randomVerb.forms.present}</p>
+            <p><strong>Imperative:</strong> Soon!</p>
+            </div>
+            </div>
+            `;
     // <p><strong>Imperative:</strong> ${randomVerb.forms.imperative}</p>
   });
 });
