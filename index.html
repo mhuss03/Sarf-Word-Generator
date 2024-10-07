@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sarf Word Generator</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="app.js"></script>
+  </head>
+  <body>
+    <div
+      class="bg-[#073a4b] w-screen h-screen flex justify-center items-center px-8"
+    >
+      <div
+        class="bg-white shadow-lg rounded-lg p-8 w-full max-w-md mx-auto"
+        id="container"
+      >
+        <h1 class="text-3xl font-bold text-center mb-6">Sarf Word Generator</h1>
+        <div class="space-y-4">
+          <div class="space-y-2">
+            <label for="bab" class="block text-sm font-medium mb-1"
+              >Select a باب (Form)</label
+            >
+            <select
+              name="bab"
+              id="bab"
+              class="mt-1 block w-full pl-3 pr-10 py-2 text-base focus:outline-none sm:text-sm rounded-md bg-white"
+            >
+              <option value="Any">Any</option>
+              <option value="I">I</option>
+              <option value="II">II</option>
+              <option value="III">III</option>
+              <option value="IV">IV</option>
+              <option value="V">V</option>
+              <option value="VI">VI</option>
+              <option value="VII">VII</option>
+              <option value="VIII">VIII</option>
+              <option value="X">X</option>
+            </select>
+          </div>
+          <div class="">
+            <label for="for" ="type" class="block text-sm font-medium mb-1"
+              >Please Select a Type of word</label
+            >
+            <select
+              name="type"
+              id="type"
+              class="mt-1 block w-full pl-3 pr-10 py-2 text-base focus:outline-none sm:text-sm rounded-md bg-white"
+            >
+              <option value="Any">Any</option>
+              <option value="Saheeh">Saheeh</option>
+              <option value="Mahmooz">Mahmooz</option>
+              <option value="Mu'tal">Mu'tal</option>
+              <option value="Muda'f">Muda'f</option>
+            </select>
+          </div>
+          <button
+            id="button"
+            class="w-full flex justify-center py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium hover:bg-opacity-90 focus:outline-none focus:ring-2 focus:ring-offset-2 transition duration-150 ease-in-out button"
+          >
+            Go!
+          </button>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
